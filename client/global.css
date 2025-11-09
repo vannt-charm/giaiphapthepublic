@@ -1,0 +1,130 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 18% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 18% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 18% 15%;
+
+    --primary: 210 85% 23%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 10% 92%;
+    --secondary-foreground: 210 18% 15%;
+
+    --muted: 210 8% 90%;
+    --muted-foreground: 210 6% 50%;
+
+    --accent: 190 84% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 8% 92%;
+    --input: 210 10% 95%;
+    --ring: 190 84% 50%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 210 25% 12%;
+    --foreground: 210 10% 90%;
+
+    --card: 210 25% 15%;
+    --card-foreground: 210 10% 90%;
+
+    --popover: 210 25% 15%;
+    --popover-foreground: 210 10% 90%;
+
+    --primary: 190 84% 50%;
+    --primary-foreground: 210 25% 12%;
+
+    --secondary: 210 20% 25%;
+    --secondary-foreground: 210 10% 90%;
+
+    --muted: 210 15% 30%;
+    --muted-foreground: 210 8% 60%;
+
+    --accent: 190 84% 60%;
+    --accent-foreground: 210 25% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 25%;
+    --input: 210 20% 22%;
+    --ring: 190 84% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
+
+@layer components {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out forwards;
+    opacity: 0;
+  }
+}
