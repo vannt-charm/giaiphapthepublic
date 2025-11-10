@@ -37,6 +37,7 @@ export const Hero = () => {
 
               <Button
                 variant="outline"
+                asChild
                 className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-3 h-auto rounded-lg text-base transition-all hover:shadow-md"
               >
                 Become a Partner
@@ -49,9 +50,9 @@ export const Hero = () => {
             <div className="relative rounded-3xl shadow-2xl">
 
               {/* Team image */}
-              <div className="relative aspect-square flex items-center justify-center">
+              <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&h=700&fit=crop"
+                  src="https://images.unsplash.com/photo-1734519654307-ceb306e4073a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaW50ZWNoJTIwcHJvZmVzc2lvbmFsJTIwdGVhbXxlbnwxfHx8fDE3NjI0NDc4OTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                   alt="Team"
                   className="w-full h-full object-cover rounded-3xl shadow-2xl"
                 />
